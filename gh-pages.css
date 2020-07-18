@@ -1,15 +1,43 @@
-* {
+html {
   box-sizing: border-box;
+  font-family: menlo, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
   margin: 0;
-  font-family: menlo, monospace;
+  font-family: inherit;
   font-size: 16px;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+textarea {
+  padding: 8px;
 }
 
 .container {
   margin: auto;
   padding: 16px;
   max-width: 960px;
+}
+
+.textarea-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.textarea-container > input,
+.textarea-container > textarea {
+  flex-grow: 1;
 }
